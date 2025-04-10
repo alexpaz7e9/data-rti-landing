@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data RTI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #2F537A;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 20px;
+    }
+    /* Header sticky */
+    header {
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background-color: #2F537A; /* Evita solapamientos al hacer scroll */
+      padding: 10px 0;
+    }
+    header img {
+      height: 180px;
+    }
+    .highlight {
+      color: #D06B8E;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 1px;    
+    }
+    .tiles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .tile {
+      background-color: #3a5d86;
+      border-radius: 12px;
+      padding: 20px;
+      flex: 1 1 300px;
+      max-width: 500px;
+      box-sizing: border-box;
+    }
+    .tile h2 {
+      font-size: 1.3rem;
+      border-bottom: 2px solid #D06B8E;
+      padding-bottom: 0.25rem;
+      margin-bottom: 1rem;
+    }
+    .tile p, .tile ul {
+      margin-bottom: 1rem;
+    }
+    .tile ul {
+      padding-left: 1.2rem;
+    }
+    .tile li {
+      margin-bottom: 0.5rem;
+    }
+    a {
+      color: #D06B8E;
+      text-decoration: underline;
+    }
+    .social-inline {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .social-inline img {
+      height: 28px;
+      width: auto;
+      filter: invert(100%);
+      transition: transform 0.2s ease;
+    }
+    .social-inline img:hover {
+      transform: scale(1.1);
+    }
+    .social-inline span {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #ffffff;
+    }
+    /* Contenedor de iconos fijos: se muestra verticalmente */
+    #fixed-social {
+      position: fixed;
+      left: 0;
+      display: none; /* Solo se muestra cuando la sección original no es visible */
+      z-index: 20;
+      background-color: transparent;
+      padding: 10px;
+      /* La posición vertical se actualiza vía JavaScript para alinearse con el header */
+    }
+    #fixed-social a {
+      display: block; /* Coloca cada icono en una nueva línea */
+      margin-bottom: 10px;
+    }
+    #fixed-social img {
+      height: 30px;
+      filter: invert(100%);
+      transition: transform 0.2s ease;
+    }
+    #fixed-social img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header id="headersection">
+      <img id="logo" src="20250409_0207_Logo Mejorado_remix_01jrcf3rtkexpa8qkajs311s74.png" alt="Data RTI logo" />
+      <p class="highlight" id="tagline">Ready to Interact. Ready to Inspire.</p>
+    </header>
+
+    <div class="tiles">
+      <section class="tile">
+        <h2>¿Qué es Data RTI?</h2>
+        <p>Es una iniciativa que combina patrones de diseño, estructuras claras y una visión moderna sobre la experiencia con los datos.</p>
+        <p>Es una forma de pensar, construir y colaborar con los datos de manera que habilite la inspiración desde la cual surgen nuevas ideas y posibilidades.</p>
+        <p>Propone enfoques sólidos para quienes diseñan productos, procesos o estrategias basadas en información.</p>
+      </section>
+
+      <section class="tile">
+        <h2>En qué creemos</h2>
+        <ul>
+          <li>Que los datos deben ser tan claros como utilizables.</li>
+          <li>Que inspirar es tan importante como implementar.</li>
+          <li>Que la experiencia se diseña desde la interacción.</li>
+          <li>Que la estructura habilita el crecimiento sostenido.</li>
+        </ul>
+      </section>
+
+      <section class="tile">
+        <h2>Lo que hacemos</h2>
+        <ul>
+          <li>Artículos semanales que exploran patrones, enfoques y provocaciones sobre el uso de datos.</li>
+          <li>Consultoría estratégica para diseño de soluciones basadas en datos.</li>
+          <li>Contribuciones a iniciativas open source relacionadas con estructura, modelos, integraciones y calidad de datos.</li>
+          <li>Colaboraciones con organizaciones que buscan mejorar su experiencia de datos.</li>
+        </ul>
+      </section>
+
+      <!-- Sección original de iconos "Encontranos en" -->
+      <section id="social-section" class="tile">
+        <div class="social-inline" style="justify-content: center;">
+          <span>Encontranos en</span>
+          <a href="https://www.linkedin.com/company/data-rti" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height: 30px;" />
+          </a>
+          <a href="https://www.youtube.com/@data-rti" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" style="height: 40px;"/>
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Contenedor fijo para iconos en la izquierda (aparece cuando la sección original no es visible) -->
+  <div id="fixed-social">
+    <a href="https://www.linkedin.com/company/data-rti" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" />
+    </a>
+    <a href="https://www.youtube.com/@data-rti" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" />
+    </a>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const socialSection = document.getElementById("social-section");
+      const fixedSocial = document.getElementById("fixed-social");
+      const header = document.querySelector("header");
+  
+      function updateFixedSocialPosition() {
+        const headerRect = header.getBoundingClientRect();
+        fixedSocial.style.top = headerRect.bottom + "px";
+      }
+  
+      function adjustHighlightMargin() {
+        const tagline = document.getElementById("tagline");
+        const headersection = document.getElementById("headersection");
+      
+        const bodyHeight = document.body.scrollHeight;
+        const windowHeight = window.innerHeight;
+        
+        if (bodyHeight > windowHeight) {
+          tagline.style.marginTop = "-10px";
+          headersection.style.marginTop = "-10px";
+        } else {
+          tagline.style.marginTop = "";
+          headersection.style.marginTop = "";
+        }
+      }
+  
+      updateFixedSocialPosition();
+      adjustHighlightMargin();
+  
+      window.addEventListener("resize", () => {
+        updateFixedSocialPosition();
+        adjustHighlightMargin();
+      });
+  
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            fixedSocial.style.display = "none";
+            document.body.style.paddingLeft = "0px";
+          } else {
+            fixedSocial.style.display = "block";
+            document.body.style.paddingLeft = "30px"; // o el ancho real de tus íconos + separación deseada
+          }
+
+        });
+      }, { threshold: 0.1 });
+  
+      observer.observe(socialSection);
+    });
+  </script>
+  
+</body>
+</html>
